@@ -1,0 +1,22 @@
+{
+  "name": "token-prices-api",
+  "version": "1.0.0",
+  "description": "A simple API for querying token prices.",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node lib/index.js",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "axios": "^1.3.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.11.18",
+    "typescript": "^4.8.4",
+    "ts-node": "^10.9.1"
+  }
+} 
