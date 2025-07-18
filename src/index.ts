@@ -224,7 +224,13 @@ async function updateAllTokenPrices() {
         if (nativeTokenId) {
           const price = await fetchNativeCoinPrice(nativeTokenId);
           if (price) {
+            // Store with wrapper address
             tokenPricesCache[network.name][nativeTokenWrapper] = {
+              price,
+              lastUpdated: new Date()
+            };
+            // Also store with zero address for direct native token queries
+            tokenPricesCache[network.name]['0x0000000000000000000000000000000000000000'] = {
               price,
               lastUpdated: new Date()
             };
